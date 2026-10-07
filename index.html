@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SenActuPlus — Informer. Vérifier. Comprendre.</title>
+<meta name="description" content="SenActuPlus, média numérique sénégalais : actualité vérifiée, politique, société, économie, sport, Afrique et monde.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--red:#b3121c;--bg:#fff;--surf:#f3f3f2;--ink:#000;--txt:#2b2b2b;--line:#dcdcda;--mut:#6a6a68;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111;--surf:#1c1c1c;--ink:#f5f5f5;--txt:#d6d6d6;--line:#333;--mut:#999;--red:#e0343d}}
+:root[data-theme="dark"]{--bg:#111;--surf:#1c1c1c;--ink:#f5f5f5;--txt:#d6d6d6;--line:#333;--mut:#999;--red:#e0343d}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.5 "Source Serif 4",Georgia,serif}
+h1,h2,h3,.sans,nav,button,input,select,textarea{font-family:Archivo,"Helvetica Neue",Arial,sans-serif}
+a{color:inherit;text-decoration:none}a:hover h3,a:hover h1{color:var(--red)}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+.top{border-bottom:1px solid var(--line);font:13px Archivo,sans-serif;color:var(--mut)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;min-height:36px;gap:8px}
+.top button,.icon{background:none;border:1px solid var(--line);color:var(--ink);border-radius:6px;padding:4px 10px;cursor:pointer;font-size:14px}
+.brand{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+.logo{font:800 32px Archivo;color:var(--ink);letter-spacing:-1px}.logo b{color:var(--red)}
+.logo{display:flex;align-items:center;gap:12px}.logo img{width:72px;height:72px;object-fit:contain;background:#fff;border-radius:8px}.logo small{display:block;font:500 11px Archivo;color:var(--mut);letter-spacing:0}
+nav.main{border-top:3px solid var(--ink);border-bottom:1px solid var(--line);position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:5}
+nav.main .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+nav.main a{padding:12px 12px;font-weight:700;font-size:15px;color:var(--ink);white-space:nowrap;border-bottom:3px solid transparent;margin-bottom:-1px}
+nav.main a.on,nav.main a:hover{border-color:var(--red);color:var(--red)}
+.ticker{background:var(--red);color:#fff;font:600 14px Archivo;display:flex;overflow:hidden}
+.ticker span.l{background:#000;padding:8px 14px;white-space:nowrap;flex:none}
+.ticker .run{white-space:nowrap;padding:8px 0;animation:run 40s linear infinite}
+.ticker .run i{margin:0 28px;font-style:normal}
+@keyframes run{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
+@media(prefers-reduced-motion:reduce){.ticker .run{animation:none;overflow:auto}}
+.ad{margin:18px auto;text-align:center;font:11px Archivo;color:var(--mut)}
+.ad div{margin:3px auto 0;background:var(--surf);border:1px dashed var(--line);display:grid;place-items:center;max-width:728px;height:90px;font-size:13px}
+.ad.side div{max-width:300px;height:250px}
+.grid{display:grid;gap:24px;grid-template-columns:1fr}
+@media(min-width:900px){.grid.una{grid-template-columns:2fr 1fr}.grid.main{grid-template-columns:2fr 1fr}.cols3{grid-template-columns:repeat(3,1fr)!important}.cols2{grid-template-columns:1fr 1fr!important}}
+.img{aspect-ratio:16/9;background:linear-gradient(135deg,var(--c1,#555),var(--c2,#222));border-radius:4px;position:relative;overflow:hidden;display:flex;align-items:flex-end}
+.img em{font:600 11px Archivo;color:#fff;background:rgba(0,0,0,.55);padding:3px 8px;margin:8px;font-style:normal;border-radius:3px}
+.cat{font:700 13px Archivo;color:var(--red)}
+.meta{font:13px Archivo;color:var(--mut)}
+h1{font-size:clamp(28px,5vw,44px);line-height:1.1;color:var(--ink);margin:.3em 0;letter-spacing:-.5px}
+h2.sec{font:800 22px Archivo;color:var(--ink);border-top:3px solid var(--ink);padding-top:10px;margin:36px 0 16px;display:flex;justify-content:space-between;align-items:baseline}
+h2.sec a{font:600 14px Archivo;color:var(--red)}
+h3{font-size:18px;line-height:1.25;color:var(--ink);margin:6px 0}
+.big h3{font-size:clamp(24px,4vw,34px)}
+.card .img{transition:none}.card:hover .img{filter:brightness(1.08)}
+.card p{margin:4px 0;font-size:15px}
+.feed .row{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.feed time{font:700 14px Archivo;color:var(--red);flex:none;width:48px}
+.rank{counter-reset:r}.rank a{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.rank a:before{counter-increment:r;content:counter(r);font:800 24px Archivo;color:var(--red);width:28px;flex:none}
+.rank h3{margin:0;font-size:16px}
+.box{background:var(--surf);padding:18px;border-radius:6px}
+.box input,.field{width:100%;padding:11px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font-size:15px;margin:6px 0}
+.btn{background:var(--red);color:#fff;border:0;border-radius:6px;padding:11px 18px;font-weight:700;cursor:pointer;font-size:15px}
+.btn.alt{background:#25d366;color:#000}
+.live{display:inline-block;background:var(--red);color:#fff;font:700 12px Archivo;padding:3px 8px;border-radius:3px}
+.art{max-width:720px;margin:0 auto}.art .body{font-size:19px;line-height:1.7}.art .body p{margin:0 0 1.1em}
+.chapo{font-size:21px;line-height:1.45;color:var(--ink);font-weight:600}
+.crumb{font:13px Archivo;color:var(--mut)}
+.share{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.share a,.share button{font:600 13px Archivo;border:1px solid var(--line);border-radius:6px;padding:8px 12px;background:none;color:var(--ink);cursor:pointer}
+.cm{padding:12px 0;border-bottom:1px solid var(--line);font-size:16px}
+table{width:100%;border-collapse:collapse;font:14px Archivo}td,th{padding:9px;border-bottom:1px solid var(--line);text-align:left}
+.kpi{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}@media(min-width:700px){.kpi{grid-template-columns:repeat(4,1fr)}}
+.kpi div{background:var(--surf);padding:14px;border-radius:6px}.kpi b{display:block;font:800 26px Archivo;color:var(--ink)}
+.demo{background:var(--surf);font:12px Archivo;text-align:center;padding:6px;color:var(--mut)}
+.jr{display:grid;gap:24px;grid-template-columns:1fr;align-items:start}@media(min-width:800px){.jr{grid-template-columns:minmax(0,340px) 1fr}}
+.jr img.cover{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:4px;cursor:zoom-in}
+.pt{list-style:none;margin:0;padding:0;font-size:17px}.pt li{padding:9px 0;border-bottom:1px solid var(--line)}
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:20;display:none;overflow:auto;padding:16px;cursor:zoom-out}.lb.on{display:block}.lb img{display:block;margin:0 auto;max-width:100%;height:auto}
+footer .fl{width:64px;height:64px;background:#fff;border-radius:8px;margin-bottom:8px}footer{background:#000;color:#ccc;margin-top:48px;padding:32px 0 90px;font:14px Archivo}
+footer .wrap{display:grid;gap:24px;grid-template-columns:repeat(2,1fr)}@media(min-width:800px){footer .wrap{grid-template-columns:repeat(5,1fr)}}
+footer h4{color:#fff;margin:0 0 8px}footer a{display:block;padding:3px 0}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:6;display:none;gap:8px;padding:8px 12px calc(8px + env(safe-area-inset-bottom,0px));background:var(--bg);border-top:1px solid var(--line)}
+@media(max-width:700px){.sticky.show{display:flex}.sticky a{flex:1;text-align:center}}
+</style>
+</head>
+<body>
+<div class="demo">CONTENU DE DÉMONSTRATION — les articles, chiffres et commentaires sont fictifs.</div>
+<div class="top"><div class="wrap"><span id="date"></span><span>Dakar, Sénégal</span><span><button id="theme" aria-label="Changer de thème">🌙 / ☀️</button> <button onclick="go('/recherche')" aria-label="Rechercher">🔍 Recherche</button> </span></div></div>
+<header class="wrap brand"><a href="#/" class="logo" aria-label="SenActuPlus, accueil"><img src="/assets/logo.jpg" alt="Logo SenActuPlus" width="72" height="72"><span>Sen<b>Actu</b>Plus<small>Informer. Vérifier. Comprendre.</small></span></a></header>
+<nav class="main" aria-label="Rubriques"><div class="wrap" id="nav"></div></nav>
+<div class="ticker"><span class="l">🔴 Dernière minute</span><div class="run" id="run"></div></div>
+<main class="wrap" id="app" tabindex="-1"></main>
+<footer><div class="wrap">
+<div><img class="fl" src="/assets/logo.jpg" alt="Logo SenActuPlus"><h4>SenActuPlus</h4><a href="#/page/a-propos">À propos</a><a href="#/journal">Le journal</a><a href="#/page/redaction">Notre rédaction</a><a href="#/page/contact">Contact</a></div>
+<div><h4>Navigation</h4><a href="#/c/politique">Politique</a><a href="#/c/societe">Société</a><a href="#/c/economie">Économie</a><a href="#/c/sport">Sport</a></div>
+<div><h4>Services</h4><a href="#/page/publicite">Publicité</a><a href="#/page/communiques">Communiqués</a><a href="#/page/emploi">Emploi</a></div>
+<div><h4>Informations</h4><a href="#/page/mentions">Mentions légales</a><a href="#/page/confidentialite">Confidentialité</a></div>
+<div><h4>Suivez-nous</h4><a href="https://linktr.ee/Senactuplus?utm_source=linktree_profile_share&ltsid=03957aa3-80b2-495a-9ce3-1d227c7c52cb">click ici pour voir Nos plateformes📥</a><a>
+<div style="grid-column:1/-1;border-top:1px solid #333;padding-top:14px">© 2026 SenActuPlus — Tous droits réservés.</div></div></footer>
+<div class="lb" id="lb" onclick="zoom()" role="dialog" aria-label="Journal agrandi"><img src="" alt="Journal SenActuPlus agrandi" id="lbi"></div>
+<div class="sticky" id="sticky"><a class="btn alt" id="wa" target="_blank" rel="noopener">Partager sur WhatsApp</a></div>
+<script src="/config.js"></script>
+<script>
+const CATS=[["politique","Politique","#8e1018","#2a0508"],["societe","Société","#2f5d8a","#0e2236"],["economie","Économie","#2f7a4f","#0c2a1a"],["sport","Sport","#c9760b","#3a2204"],["afrique","Afrique","#6b3f8f","#1f0f2c"],["international","International","#35637a","#0f232e"],["culture","Culture","#a03a6b","#2e0f20"],["technologie","Technologie","#3a4a8a","#10152e"]];
+const cat=k=>CATS.find(c=>c[0]===k);
+const T={politique:["Le Parlement examine un projet de loi sur la transparence des marchés publics","Commission d'enquête : les députés auditionnent trois responsables","Un nouveau calendrier annoncé pour les concertations nationales","Réforme territoriale : les maires demandent plus de moyens"],societe:["Inondations : les quartiers sensibles de la banlieue sous surveillance","Transports : le BRT étend ses horaires en soirée","Santé publique : une campagne de vaccination lancée dans les écoles","Sécurité routière : un bilan en baisse sur l'axe Dakar–Thiès"],economie:["Agriculture : la campagne de commercialisation de l'arachide démarre","Énergie : de nouveaux projets solaires annoncés dans le Sine-Saloum","Emploi des jeunes : un programme d'entrepreneuriat ouvre ses candidatures","Finances publiques : ce que contient la loi de finances rectificative"],sport:["Lions : le sélectionneur dévoile sa liste pour les prochaines rencontres","Lutte : l'affiche du grand combat de l'année se précise","Basketball : les équipes nationales en préparation","Championnat local : la course au titre se resserre"],afrique:["Afrique de l'Ouest : les chefs d'État réunis pour un sommet régional","Maroc : un accord logistique avec plusieurs pays du Sahel","Côte d'Ivoire : de nouveaux investissements dans les ports"],international:["France : débat sur la politique migratoire à l'Assemblée","États-Unis : la Fed maintient ses taux directeurs","Asie : les exportations de matières premières africaines en hausse"],culture:["Festival : la programmation de la saison dévoilée à Dakar","Cinéma : un film sénégalais sélectionné dans un festival international"],technologie:["Startups : une levée de fonds pour une fintech basée à Dakar","Numérique : la couverture 5G progresse dans les grandes villes"]};
+let A=[],id=1;
+const authors=["Aïssatou Ndiaye","Moussa Sarr","Fatou Diop","Cheikh Fall"];
+for(const k in T)T[k].forEach((t,i)=>{A.push({id:id,slug:t.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").slice(0,60),t,cat:k,min:id*37%1380+5,views:Math.floor(25000/(id*.7+1)+id*91%900),com:id*3%17,au:authors[id%4],tag:["Sénégal","Dakar","Actualité"][id%3],body:null});id++});
+A.sort((a,b)=>a.min-b.min);
+const hhmm=m=>{const d=new Date(Date.now()-m*60000);return d.toTimeString().slice(0,5)};
+const ago=m=>m<60?`Il y a ${m} min`:`Il y a ${Math.floor(m/60)} h`;
+const mostRead=()=>[...A].sort((a,b)=>b.views-a.views).slice(0,10);
+const esc=x=>String(x??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const img=a=>{const c=cat(a.cat);if(a.real&&a.image)return `<div class="img"><img src="${esc(a.image)}" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>`;return `<div class="img" style="--c1:${c[2]};--c2:${c[3]}" role="img" aria-label="Illustration ${c[1]}">${a.real?"":"<em>Image de démonstration</em>"}</div>`};
+const card=a=>`<a class="card" href="#/a/${a.slug}">${img(a)}<div class="cat" style="margin-top:8px">${cat(a.cat)[1]}</div><h3>${a.t}</h3><div class="meta">${ago(a.min)} · ${a.views.toLocaleString("fr")} lectures · ${a.com} commentaires</div></a>`;
+const ad=(c="")=>`<div class="ad ${c}">PUBLICITÉ<div>Emplacement ${c?"300×250":"728×90 / mobile 320×100"}</div></div>`;
+const section=(k,n=4)=>{const L=A.filter(a=>a.cat===k).slice(0,n),c=cat(k);if(!L.length)return"";return `<h2 class="sec">${c[1]}<a href="#/c/${k}">Tout voir</a></h2><div class="grid cols2"><div class="big">${card(L[0])}</div><div class="feed">${L.slice(1).map(a=>`<a class="row" href="#/a/${a.slug}"><time>${hhmm(a.min)}</time><h3 style="margin:0;font-size:16px">${a.t}</h3></a>`).join("")}</div></div>`};
+const aside=()=>`<aside><h2 class="sec" style="margin-top:0">🔥 Les plus lus</h2><div class="rank">${mostRead().slice(0,6).map(a=>`<a href="#/a/${a.slug}"><div><h3>${a.t}</h3><div class="meta">${a.views.toLocaleString("fr")} lectures</div></div></a>`).join("")}</div>${ad("side")}${news()}</aside>`;
+const news=()=>`<div class="box" style="margin-top:18px"><h3>La newsletter SenActuPlus</h3><p style="font:14px Archivo">Recevez l'essentiel de l'actualité dans votre boîte mail.</p><input type="email" id="nl" placeholder="Votre e-mail" aria-label="E-mail"><button class="btn" onclick="sub()">Je m'abonne</button><div id="nlm" class="meta" role="status"></div></div>`;
+function sub(){const v=document.getElementById("nl").value;document.getElementById("nlm").textContent=/\S+@\S+\.\S+/.test(v)?"Merci ! Un e-mail de confirmation (double opt-in) vous sera envoyé.":"Saisissez une adresse e-mail valide."}
+const JOURNAL="/assets/journal.jpg";
+const POINT=[["🔴","Éducation : la rentrée scolaire est reportée au 12 octobre."],["🌧️","Météo : de nouvelles pluies sont attendues dans plusieurs régions."],["🏫","Fatick : 77 établissements scolaires affectés par l'hivernage."],["🏛️","Parlement : l'enquête sur « Un étudiant, un ordinateur » se poursuit."],["🧴","Softcare : reprise possible sous conditions."],["💰","Dette : Dakar vise un accord avec ses créanciers avant décembre."],["⚡","Électricité : objectif d'accès universel fixé à 2029."],["🏟️","JOJ : 166 mesures prévues pour gérer la circulation à Dakar."],["🔥","Flamme olympique : étape à Matam."]];
+const pointList=n=>`<ul class="pt">${POINT.slice(0,n).map(p=>`<li>${p[0]} ${p[1]}</li>`).join("")}</ul>`;
+const zoom=()=>{const l=document.getElementById("lb");document.getElementById("lbi").src=JOURNAL;l.classList.toggle("on")};
+function journalBlock(full){return `<div class="jr"><div><img class="cover" src="${JOURNAL}" alt="Une du journal SenActuPlus n°07 du mercredi 7 octobre 2026" onclick="zoom()" tabindex="0" onkeydown="if(event.key==='Enter')zoom()"><div class="meta" style="margin-top:6px">Touchez l'image pour l'agrandir.</div></div><div><h3 style="font-size:24px;margin-top:0">Point Actu n°07 — mercredi 7 octobre 2026</h3><p>L'essentiel de l'actualité du Sénégal en un seul fichier : politique, société, sport, religion… tout ce qu'il faut savoir aujourd'hui.</p><div class="cat">L'essentiel à retenir</div>${pointList(full?9:5)}${full?"":'<p><a class="btn" href="#/journal" style="display:inline-block">Lire le journal</a></p>'}</div></div>`}
+function journalPage(){return `<p class="crumb"><a href="#/">Accueil</a> › Journal</p><h1>Le journal SenActuPlus</h1><p class="meta">Informer. Vérifier. Comprendre. — L'actualité sénégalaise autrement.</p>${ad()}${journalBlock(true)}<h2 class="sec">Éditions précédentes</h2><p class="meta">Les éditions n°01 à n°06 seront ajoutées ici depuis l'espace admin (démo).</p>`}
+let breaking=["Inondations : point de situation attendu dans les quartiers sensibles de la banlieue","Lions : conférence de presse du sélectionneur à 18 h","Assemblée nationale : séance plénière en cours"];
+function home(){if(!A.length)return "<h1>SenActuPlus</h1><p>Aucun article publié pour le moment.</p>";const u=A[0],s=A.slice(1,5),l=A.slice(5,11);
+return ad()+`<div class="grid una"><div class="big">${card(u).replace('<div class="cat"','<span class="live">À LA UNE</span><div class="cat"')}</div><div>${s.map(a=>`<a class="card" href="#/a/${a.slug}" style="display:block;padding-bottom:12px;border-bottom:1px solid var(--line);margin-bottom:12px"><div class="cat">${cat(a.cat)[1]}</div><h3>${a.t}</h3><div class="meta">${ago(a.min)}</div></a>`).join("")}</div></div>
+<div class="grid main"><div><h2 class="sec">Dernières actualités</h2><div class="grid cols2">${l.map(card).join("")}</div>
+<h2 class="sec">Dernières infos</h2><div class="feed" id="feed">${A.slice(0,6).map(a=>`<a class="row" href="#/a/${a.slug}"><time>${hhmm(a.min)}</time><div><span class="cat">${cat(a.cat)[1]}</span><h3 style="margin:0;font-size:16px">${a.t}</h3></div></a>`).join("")}</div><button class="btn" style="margin-top:12px" onclick="more(this)">Voir plus</button>
+${ad()}${["politique","societe","economie","sport"].map(k=>section(k)).join("")}${ad()}
+<h2 class="sec">🌍 Afrique et monde</h2><div class="grid cols2"><div>${A.filter(a=>a.cat==="afrique").map(card).join("")}</div><div>${A.filter(a=>a.cat==="international").map(card).join("")}</div></div></div>${aside()}</div>
+<h2 class="sec">Le journal SenActuPlus<a href="#/journal">Toute l'édition</a></h2>${journalBlock(false)}<h2 class="sec">En direct</h2><div class="box"><span class="live">LIVE</span> <h3>Séance plénière à l'Assemblée nationale (démo)</h3><div class="feed"><div class="row"><time>16:42</time><div>Ouverture de la séance et lecture de l'ordre du jour.</div></div><div class="row"><time>16:55</time><div>Début de la présentation du projet de loi.</div></div></div></div>`}
+function more(b){const f=document.getElementById("feed");A.slice(6).forEach(a=>f.insertAdjacentHTML("beforeend",`<a class="row" href="#/a/${a.slug}"><time>${hhmm(a.min)}</time><div><span class="cat">${cat(a.cat)[1]}</span><h3 style="margin:0;font-size:16px">${a.t}</h3></div></a>`));b.remove()}
+function catPage(k){const c=cat(k);if(!c)return"<p>Rubrique introuvable.</p>";const L=A.filter(a=>a.cat===k);return `<p class="crumb"><a href="#/">Accueil</a> › ${c[1]}</p><h1>${c[1]}</h1>${ad()}<div class="grid cols3">${L.map(card).join("")||"<p>Aucun article pour le moment.</p>"}</div>`}
+const para=["Selon les premières informations recueillies par la rédaction, la situation évolue rapidement et plusieurs acteurs ont été sollicités.","Les autorités concernées devraient s'exprimer dans les prochaines heures. Nous actualiserons cet article dès que de nouveaux éléments seront vérifiés.","« Il est important de s'en tenir aux faits confirmés », rappelle un observateur interrogé par SenActuPlus.","Contexte : ce sujet suit plusieurs développements des dernières semaines, que vous pouvez retrouver dans nos articles liés."];
+let CM={};
+function article(s){const a=A.find(x=>x.slug===s);if(!a)return"<p>Article introuvable.</p>";const c=cat(a.cat);a.views++;if(a.real&&SB.SUPABASE_URL)fetch(SB.SUPABASE_URL+"/rest/v1/rpc/increment_views",{method:"POST",headers:{apikey:SB.SUPABASE_ANON_KEY,Authorization:"Bearer "+SB.SUPABASE_ANON_KEY,"Content-Type":"application/json"},body:JSON.stringify({p_id:a.id})}).catch(()=>{});
+const url=encodeURIComponent(location.href),t=encodeURIComponent(a.raw||a.t);
+document.title=(a.raw||a.t)+" — SenActuPlus";document.getElementById("wa").href=`https://wa.me/?text=${t}%20${url}`;document.getElementById("sticky").classList.add("show");
+const rel=A.filter(x=>x.cat===a.cat&&x!==a).concat(A).filter((x,i,r)=>x!==a&&r.indexOf(x)===i).slice(0,4);
+const cms=(CM[a.slug]||[{n:"Ibrahima",t:"Merci pour cet éclairage, article très clair.",l:4},{n:"Khady",t:"Il faudra suivre l'évolution de ce dossier.",l:2}]);
+return `<article class="art"><p class="crumb"><a href="#/">Accueil</a> › <a href="#/c/${a.cat}">${c[1]}</a> › Article</p><div class="cat">${c[1]}</div><h1>${a.t}</h1><p class="chapo">${a.real?esc(a.chapo):"Résumé de démonstration : ce chapeau présente en deux à quatre lignes l'essentiel de l'information traitée dans cet article."}</p><div class="meta">Publié ${a.real?"le "+new Date(Date.now()-a.min*60000).toLocaleString("fr-FR",{dateStyle:"long",timeStyle:"short"}):"à "+hhmm(a.min)} · Par ${a.au} · ${a.real?Math.max(1,Math.round((a.body||"").split(/\s+/).length/200)):3} min de lecture · ${a.views.toLocaleString("fr")} lectures</div>${img(a)}${a.real?"":'<div class="meta">Légende de démonstration. Crédit : SenActuPlus.</div>'}
+<div class="share"><a target="_blank" rel="noopener" href="https://wa.me/?text=${t}%20${url}">WhatsApp</a><a target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=${url}">Facebook</a><a target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?text=${t}&url=${url}">X</a><button onclick="navigator.clipboard&&navigator.clipboard.writeText(location.href);this.textContent='Lien copié'">Copier le lien</button></div>
+<div class="body">${a.real?paras(a.body):""}${a.real?"":para.slice(0,2).map(p=>`<p>${p}</p>`).join("")}${a.real?"":ad()+para.slice(2).map(p=>`<p>${p}</p>`).join("")}</div>
+<p class="meta">Tags : #${a.tag} #${c[1]}</p>
+${a.real?"":`<h2 class="sec">Commentaires (${cms.length})</h2><div id="cms">${cms.map(m=>`<div class="cm"><b class="sans">${m.n}</b> <span class="meta">· à l'instant · ${m.l} J'aime</span><br>${m.t}</div>`).join("")}</div>
+<input class="field" id="cn" placeholder="Votre nom" aria-label="Nom"><textarea class="field" id="ct" rows="3" placeholder="Votre commentaire (modéré avant publication)" aria-label="Commentaire"></textarea><button class="btn" onclick="comment('${a.slug}')">Publier</button><div id="cmm" class="meta" role="status"></div>`}
+<h2 class="sec">À lire aussi</h2><div class="grid cols2">${rel.map(card).join("")}</div></article>`}
+function comment(s){const n=document.getElementById("cn").value.trim(),t=document.getElementById("ct").value.trim();if(!n||!t||t.length>1000){document.getElementById("cmm").textContent="Renseignez votre nom et un commentaire (1000 caractères max).";return}
+document.getElementById("cmm").textContent="Merci ! Votre commentaire est en attente de modération.";document.getElementById("ct").value=""}
+function search(q=""){return `<h1>Recherche</h1><input class="field" id="q" value="${q.replace(/"/g,"")}" placeholder="Titre, catégorie, auteur, mot-clé…" aria-label="Rechercher" oninput="res(this.value)" autofocus><p class="meta">Recherches populaires : <a href="#/recherche/Lions"><u>Lions</u></a>, <a href="#/recherche/Inondations"><u>Inondations</u></a>, <a href="#/recherche/Emploi"><u>Emploi</u></a></p><div id="res" class="grid cols3"></div>`}
+function res(q){const n=s=>s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");const x=n(q);const L=x?A.filter(a=>n(a.t+a.au+cat(a.cat)[1]+a.tag).includes(x)):[];document.getElementById("res").innerHTML=x?(L.map(card).join("")||"<p>Aucun résultat. Essayez un autre mot-clé.</p>"):""}
+const PAGES={"a-propos":["À propos","SenActuPlus est un média numérique sénégalais dédié à l'information, à l'analyse et au décryptage de l'actualité nationale, africaine et internationale. Indépendance éditoriale, vérification, rapidité, proximité."],publicite:["Votre marque devant l'audience SenActuPlus","Formats : leaderboard 728×90, 970×250, mobile 320×100, sidebar 300×250. Tarifs et statistiques sur demande (démo)."],contact:["Contact","Rédaction, publicité, partenariat, communiqué, signalement ou correction : écrivez-nous à contact@senactuplus.example (adresse de démonstration)."],emploi:["Emploi","Espace d'offres d'emploi (démo) : poste, entreprise, localisation, type de contrat, date limite."],communiques:["Communiqués","Les communiqués d'organisations sont clairement distingués des articles de la rédaction (démo)."],redaction:["Notre rédaction","Page de présentation de l'équipe (démo)."],mentions:["Mentions légales","Contenu à compléter."],confidentialite:["Politique de confidentialité","Contenu à compléter."]};
+function route(){const h=location.hash.slice(1)||"/",[,a,b]=h.split("/"),app=document.getElementById("app");document.getElementById("sticky").classList.remove("show");document.title="SenActuPlus — Informer. Vérifier. Comprendre.";
+document.querySelectorAll("#nav a").forEach(x=>x.classList.toggle("on",x.getAttribute("href")==="#"+h||(h==="/"&&x.textContent==="Accueil")));
+app.innerHTML=a==="c"?catPage(b):a==="a"?article(b):a==="recherche"?search(decodeURIComponent(b||"")):a==="journal"?journalPage():a==="page"&&PAGES[b]?`<div class="art"><h1>${PAGES[b][0]}</h1><p class="body">${PAGES[b][1]}</p></div>`:home();
+if(a==="recherche")res(decodeURIComponent(b||""));window.scrollTo(0,0)}
+function go(p){location.hash=p}
+function ticker(){document.querySelector(".ticker").style.display=breaking.length?"":"none";document.getElementById("run").innerHTML=breaking.map(t=>`<i>${t}</i>`).join("•")}
+document.getElementById("nav").innerHTML=`<a href="#/">Accueil</a><a href="#/journal">Journal</a>`+CATS.map(c=>`<a href="#/c/${c[0]}">${c[1]}</a>`).join("");
+document.getElementById("date").textContent=new Date().toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long",year:"numeric"});
+document.getElementById("theme").onclick=()=>{const r=document.documentElement,d=getComputedStyle(r).getPropertyValue("--bg").trim()==="#111";r.dataset.theme=d?"light":"dark"};
+const SB=window.SENACTU||{};
+const paras=t=>String(t||"").split(/\n\s*\n/).filter(p=>p.trim()).map(p=>`<p>${esc(p.trim()).replace(/\n/g,"<br>")}</p>`).join("");
+async function loadReal(){if(!SB.SUPABASE_URL||!SB.SUPABASE_ANON_KEY)return;/* pas de config : le site reste en mode démo */
+A=[];breaking=[];
+try{const r=await fetch(SB.SUPABASE_URL+"/rest/v1/articles?select=*&published=eq.true&order=created_at.desc&limit=200",{headers:{apikey:SB.SUPABASE_ANON_KEY,Authorization:"Bearer "+SB.SUPABASE_ANON_KEY}});
+if(!r.ok)throw 0;const rows=await r.json();
+A=rows.map(x=>({id:x.id,real:true,slug:x.slug,raw:x.title,t:esc(x.title),cat:cat(x.category)?x.category:"societe",min:Math.max(0,Math.floor((Date.now()-new Date(x.created_at))/60000)),views:x.views||0,com:0,au:esc(x.author),tag:esc(x.tag||"Actualité"),chapo:x.chapo,body:x.body,image:/^https:\/\//.test(x.image_url||"")?x.image_url:null,featured:x.featured}));
+const f=A.findIndex(a=>a.featured);if(f>0)A.unshift(A.splice(f,1)[0]);
+breaking=rows.filter(x=>x.breaking).slice(0,8).map(x=>esc(x.title))}catch(e){}}
+addEventListener("hashchange",route);
+(async()=>{await loadReal();ticker();route()})();
+</script>
+</body>
+</html>
